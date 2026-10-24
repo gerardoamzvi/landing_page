@@ -150,3 +150,107 @@ h1 em, h2 em { color: var(--coral); font-family: 'Manrope', 'DM Sans', sans-seri
   .step-card p, .feature-list li, .audience-points span, .faq-list p { font-size: 15px; }
   .faq-list summary { font-size: 16px; }
 }
+
+/* Responsive tablet refinements: keep the product storytelling side-by-side until it stops being readable. */
+@media (min-width: 721px) and (max-width: 1100px) {
+  .page-width { width: min(calc(100% - 56px), 900px); }
+
+  .hero {
+    min-height: 540px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(240px, .92fr);
+    gap: clamp(24px, 3.6vw, 36px);
+    padding-top: 28px;
+    padding-bottom: 42px;
+  }
+  .hero h1 { font-size: clamp(52px, 6.5vw, 68px); }
+  .hero-product { min-height: 520px; }
+  .hero-device-welcome { width: min(100%, 270px); }
+  .hero-shape-one { width: 470px; height: 420px; }
+
+  .product-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(230px, .92fr);
+    gap: clamp(28px, 4vw, 42px);
+  }
+  .product-image-large, .audience-device { width: min(100%, 280px); }
+
+  .audience-section {
+    grid-template-columns: minmax(0, 1.08fr) minmax(230px, .92fr);
+    gap: clamp(28px, 4vw, 50px);
+  }
+  .founder-grid {
+    grid-template-columns: minmax(230px, .92fr) minmax(0, 1.08fr);
+    gap: clamp(28px, 4vw, 50px);
+  }
+}
+
+/* Navigation turns into a menu before the labels become crowded. */
+@media (min-width: 721px) and (max-width: 860px) {
+  .header { width: calc(100% - 56px); height: 70px; }
+  .menu-button { width: 40px; height: 40px; display: grid; place-items: center; color: var(--ink); }
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    padding: 10px 16px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: var(--surface);
+    box-shadow: 0 18px 42px #2b07121c;
+  }
+  .navigation-open { display: flex; }
+  .navigation > a:not(.button) { padding: 13px 2px; border-bottom: 1px solid var(--line); }
+  .nav-button { align-self: flex-start; margin-top: 14px; }
+}
+
+/* Paired chat screens need room; give them their own row before they become too small. */
+@media (min-width: 641px) and (max-width: 900px) {
+  .conversation-section, .faq-section { grid-template-columns: 1fr; gap: 32px; }
+  .conversation-copy, .faq-intro { max-width: 560px; }
+  .conversation-devices { justify-content: flex-start; }
+  .conversation-image { width: min(29vw, 220px); }
+}
+
+/* Compact tablets still tell the story horizontally; phones stack below 640px. */
+@media (min-width: 641px) and (max-width: 720px) {
+  .hero {
+    min-height: 450px;
+    grid-template-columns: minmax(0, 1.14fr) minmax(185px, .86fr);
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+  .hero h1 { font-size: clamp(44px, 7vw, 52px); line-height: 1; }
+  .hero-lede { font-size: 15px; line-height: 1.62; }
+  .hero-product { min-height: 450px; }
+  .hero-device-welcome { width: min(100%, 220px); }
+  .hero-shape-one { width: 360px; height: 350px; }
+
+  .product-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(190px, .85fr);
+    gap: 20px;
+  }
+  .audience-section {
+    grid-template-columns: minmax(0, 1.15fr) minmax(190px, .85fr);
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .founder-grid {
+    grid-template-columns: minmax(190px, .85fr) minmax(0, 1.15fr);
+    gap: 20px;
+  }
+  .product-image-large, .audience-device { width: min(100%, 230px); }
+  .product-copy h2, .audience-copy h2 { font-size: clamp(36px, 6.4vw, 44px); }
+
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .step-card:last-child { grid-column: 1 / -1; }
+
+  .conversation-section, .faq-section { grid-template-columns: 1fr; gap: 30px; }
+  .conversation-devices { gap: 14px; }
+  .conversation-image { width: min(28vw, 180px); }
+}
