@@ -121,7 +121,7 @@ function App() {
             <div className="hero-shape hero-shape-one" />
             <div className="hero-shape hero-shape-two" />
             <figure className="hero-device hero-device-welcome">
-              <img src="/app-screens/welcome-hero.png" alt="Find my date boss welcome screen: Good people. Good work." />
+              <img src="/app-screens/welcome-hero.png" width={494} height={1016} alt="Find my date boss welcome screen: Good people. Good work." />
             </figure>
           </div>
         </section>
@@ -176,7 +176,7 @@ function App() {
               </ul>
             </div>
             <figure className="product-image product-image-large">
-              <img src="/app-screens/mutual-yes.png" alt="A mutual match between a product designer and a startup co-founder in Find my date boss." loading="lazy" />
+              <img src="/app-screens/mutual-yes.png" width={488} height={1034} alt="A mutual match between a product designer and a startup co-founder in Find my date boss." loading="lazy" />
             </figure>
           </div>
         </section>
@@ -193,14 +193,14 @@ function App() {
               <a className="text-link" href="#faq" onClick={handleAnchorNavigation}>See candidate questions <Icon name="arrow" size={16} /></a>
           </div>
           <figure className="audience-device audience-device-candidate">
-            <img src="/app-screens/candidate-discover.png" alt="A candidate discovering a founder profile and role details in Find my date boss." loading="lazy" />
+            <img src="/app-screens/candidate-discover.png" width={485} height={1031} alt="A candidate discovering a founder profile and role details in Find my date boss." loading="lazy" />
           </figure>
         </section>
 
         <section className="founder-section" id="founders">
           <div className="page-width founder-grid">
             <figure className="audience-device audience-device-founder">
-              <img src="/app-screens/candidate-detail.png" alt="A candidate profile showing a voice intro, working style, project, experience, and CV in Find my date boss." loading="lazy" />
+              <img src="/app-screens/candidate-detail.png" width={486} height={1020} alt="A candidate profile showing a voice intro, working style, project, experience, and CV in Find my date boss." loading="lazy" />
             </figure>
             <div className="audience-copy founder-copy">
               <p className="eyebrow"><span />For founders and small teams</p>
@@ -223,10 +223,10 @@ function App() {
           </div>
           <div className="conversation-devices" aria-label="A match becomes a chat and then a coffee meeting">
             <figure className="conversation-image">
-              <img src="/app-screens/chat.png" alt="A direct conversation after a mutual match in Find my date boss." loading="lazy" />
+              <img src="/app-screens/chat.png" width={491} height={1015} alt="A direct conversation after a mutual match in Find my date boss." loading="lazy" />
             </figure>
             <figure className="conversation-image">
-              <img src="/app-screens/coffee.png" alt="A coffee meeting confirmation after a mutual match in Find my date boss." loading="lazy" />
+              <img src="/app-screens/coffee.png" width={493} height={1015} alt="A coffee meeting confirmation after a mutual match in Find my date boss." loading="lazy" />
             </figure>
           </div>
         </section>

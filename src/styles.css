@@ -254,3 +254,23 @@ h1 em, h2 em { color: var(--coral); font-family: 'Manrope', 'DM Sans', sans-seri
   .conversation-devices { gap: 14px; }
   .conversation-image { width: min(28vw, 180px); }
 }
+/* Small laptop and tablet stability: preserve readable cards, centered paired screens, and a stable image layout. */
+@media (min-width: 721px) and (max-width: 860px) {
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .step-card:last-child { grid-column: 1 / -1; }
+  .navigation { top: calc(100% - 1px); }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .conversation-devices { width: min(100%, 470px); margin-inline: auto; justify-content: center; }
+  .conversation-image { width: min(42vw, 220px); }
+}
+
+@media (min-width: 641px) and (max-width: 720px) {
+  .page-width, .header { width: calc(100% - 48px); }
+  .hero-product { min-height: 475px; }
+}
+
+@media (max-width: 720px) {
+  .navigation { top: calc(100% - 1px); }
+}
