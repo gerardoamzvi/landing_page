@@ -35,7 +35,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .brand { display: inline-flex; align-items: center; min-height: 42px; }
 .wordmark-text { position: relative; display: inline-block; font-family: 'Manrope', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -.09em; line-height: 1; white-space: nowrap; }
 .word-date { position: relative; }
-.word-date::after { content: ''; position: absolute; z-index: 1; left: -2px; right: -2px; top: 52%; height: 2px; background: var(--ink); transform: rotate(-4deg); }
+.word-date::after { content: ''; position: absolute; z-index: 1; left: -2px; right: -2px; top: 52%; height: 2px; background: var(--coral); transform: rotate(-4deg); }
 .word-boss { position: absolute; left: 80px; top: -11px; color: var(--coral); font-size: 18px; transform: rotate(-4deg); }
 .navigation { display: flex; align-items: center; gap: clamp(18px, 2.8vw, 38px); }
 .navigation > a:not(.button) { color: var(--muted); font-size: 12px; font-weight: 700; transition: color .18s ease; }
