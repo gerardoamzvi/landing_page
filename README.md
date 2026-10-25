@@ -1,23 +1,82 @@
-# Find my date boss
+# Find my date boss — Landing Page
 
-Stop applying. Start matching.
+**Stop applying. Start matching.**
 
-Application mobile-first de mise en relation entre candidats et petites entreprises, centrée sur la personnalité et la compatibilité humaine.
+The marketing site for **Find my date boss**, a personality-first hiring experience for startup teams and candidates. The product puts working style, human context, and mutual interest before a conventional application flow.
 
-## Structure
+**Live site:** https://findmydaddy.vercel.app/
 
-- `docs/` — vision produit, parcours MVP et feuille de route
-- `src/` — application web
-- `public/` — assets publics
+## What this site contains
 
-## MVP prioritaire
+- Product story and positioning
+- Candidate and founder journeys
+- Native app-screen previews
+- FAQ and early-access call to action
+- Responsive layouts for desktop, smaller laptops, tablets, and mobile
+- Open Graph and Twitter Card metadata for shared-link previews
 
-1. Landing page claire
-2. Onboarding candidat simple
-3. Cartes de profils avec swipe
-4. Match réciproque
-5. Contact après match
+## Tech stack
 
-## Démarrage prévu
+- React 19
+- TypeScript
+- Vite
+- CSS
+- Vercel for deployment
 
-Le projet sera initialisé avec React, TypeScript et Vite.
+## Run locally
+
+Install dependencies once:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will print the local address in the terminal, normally `http://localhost:5173/`.
+
+## Build for production
+
+```bash
+npm run build
+```
+
+The generated production files are written to `dist/`.
+
+## Project structure
+
+```text
+src/
+  main.tsx       # Landing-page structure and content
+  styles.css     # Visual system and responsive layouts
+public/
+  app-screens/   # Product interface imagery used by the page
+  og-image.png   # Social sharing preview image
+index.html       # Document metadata, including social preview tags
+```
+
+## Deployment
+
+Vercel deploys the site from the `main` branch of this repository. After reviewing local changes:
+
+```bash
+git add .
+git commit -m "Describe your change"
+git push origin main
+```
+
+Vercel will create a new production deployment automatically.
+
+## Shared-link preview
+
+The live page provides Open Graph and Twitter Card metadata. Messaging platforms can show the title, description, and preview image when this link is pasted:
+
+```text
+https://findmydaddy.vercel.app/
+```
+
+Some platforms cache previews. If a service still shows an old preview immediately after a deployment, paste a one-time versioned URL such as `https://findmydaddy.vercel.app/?v=2`.
